@@ -14,7 +14,7 @@ N/A
 
 The webpage is intended to help someone generate a random password based on specified criteria. To use the application, click on the red 'Generate Password' button and follow the prompts. The result will be a random password meeting the criteria you chose.
 
-![Screen shot of main section of website](assets/images/portfolio-challenge-screenshot.png)
+![Screen shot of main section of website](assets/images/password-challenge-ss.png)
 
 ## Credits
 
