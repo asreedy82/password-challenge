@@ -47,10 +47,14 @@ function generatePassword () {
     } else {
       characters = [];
     }
+    let combinedResponses = [passwordLower, passwordUpper, passwordNumber, passwordChar];
     //create an array concatenating all selected arrays from above
     totalCombinedChar = lowerAlpha.concat(upperAlpha, numbers, characters);
     console.log(totalCombinedChar);
     console.log(totalCombinedChar.length);
+    if (!combinedResponses.includes(true)) {
+      window.alert("You must choose at least one character type. Please start over.");
+    }
     return totalCombinedChar;
   }
 
