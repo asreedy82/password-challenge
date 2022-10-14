@@ -10,7 +10,7 @@ function generatePassword () {
   function getPasswordLength () {
     passwordLength = window.prompt("What length do you want your password? (Must be between 8 and 128 characters)");
     console.log(passwordLength); //logging password length
-    return passwordLength;
+    return;
   }
   
   // function to build an array of all possible characters to use in the password based on user confirmations
@@ -55,22 +55,26 @@ function generatePassword () {
     if (!combinedResponses.includes(true)) {
       window.alert("You must choose at least one character type. Please start over.");
     }
-    return totalCombinedChar;
+    return;
   }
 
   // function to build the password using a for loop and random number generator
   function getFinalPassword () {
-    for (i = 0; i < passwordLength; i ++) {
-      function getRandomNumber(max) {
-        return Math.floor(Math.random() * (max))
-        }
-      var randomNumber = getRandomNumber(totalCombinedChar.length);
-      console.log(totalCombinedChar[randomNumber]);
-      // building the password in a single string through each iteration
-      finalPassword = finalPassword + totalCombinedChar[randomNumber]; 
+    if (totalCombinedChar.length > 0) {
+      for (i = 0; i < passwordLength; i ++) {
+            function getRandomNumber(max) {
+              return Math.floor(Math.random() * (max))
+              }
+            var randomNumber = getRandomNumber(totalCombinedChar.length);
+            console.log(totalCombinedChar[randomNumber]);
+            // building the password in a single string through each iteration
+            finalPassword = finalPassword + totalCombinedChar[randomNumber];
+          }
+    } else {
+      finalPassword = '';
     }
     console.log(finalPassword);
-    return finalPassword;
+    return ;
   }
   
   // declaring functions and using if statement to ensure a proper number is entered between 8 and 128
