@@ -55,11 +55,12 @@ function generatePassword () {
     if (!combinedResponses.includes(true)) {
       window.alert("You must choose at least one character type. Please start over.");
     }
-    return;
+    return totalCombinedChar;
   }
 
   // function to build the password using a for loop and random number generator
   function getFinalPassword () {
+    console.log(totalCombinedChar.length);
     if (totalCombinedChar.length > 0) {
       for (i = 0; i < passwordLength; i ++) {
             function getRandomNumber(max) {
