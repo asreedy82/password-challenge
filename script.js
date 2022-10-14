@@ -55,7 +55,7 @@ function generatePassword () {
     if (!combinedResponses.includes(true)) {
       window.alert("You must choose at least one character type. Please start over.");
     }
-    return totalCombinedChar;
+    return;
   }
 
   // function to build the password using a for loop and random number generator
